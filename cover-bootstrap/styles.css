@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    background: linear-gradient(to bottom, #444, #555);
+    height: 100vh;
+    color: #fff;
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr) minmax(400px, 2fr) minmax(10px, 1fr);
+    grid-template-rows: 10vh 1fr 10vh;
+    grid-template-areas: 
+        ". nav ."
+        ". main ."
+        ". footer .";
+}
+
+h1, h2, h5 {
+    font-weight: normal;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    gap: .3125em;
+    padding: .625em;
+    flex-direction: column;
+    align-items: center;    
+}
+
+nav ul {
+    display: flex;
+    gap: .625em;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #999;    
+}
+
+nav a {    
+    position: relative;
+}
+
+nav a.active {
+    color: #fff;
+}
+
+nav a.active::after, nav a:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding-top: .3125em;
+    border-bottom: 2px solid #fff;
+    border-radius: .03125em;    
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main p {
+    max-width: 60ch;
+    text-align: center;
+}
+
+main > * {
+    margin-bottom: .625em;
+}
+
+main a {
+    display: block;
+    background-color: #fff;
+    color: #444;
+    padding: 1em 1.4em;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: .3125em;
+    margin-top: .625em;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
