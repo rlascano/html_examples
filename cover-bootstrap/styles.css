@@ -5,8 +5,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;    
     letter-spacing: 1.1px;
     background: linear-gradient(to bottom, #444, #555);
     height: 100vh;
@@ -66,6 +65,7 @@ nav a.active::after, nav a:hover::after {
 main {
     grid-area: main;
     display: flex;
+    gap: 2em;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -76,19 +76,14 @@ main p {
     text-align: center;
 }
 
-main > * {
-    margin-bottom: .625em;
-}
-
 main a {
     display: block;
     background-color: #fff;
     color: #444;
-    padding: 1em 1.4em;
+    padding: .5em 1.2em;
     text-decoration: none;
     font-weight: 700;
-    border-radius: .3125em;
-    margin-top: .625em;
+    border-radius: .3125em;    
 }
 
 footer {
